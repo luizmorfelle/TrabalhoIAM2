@@ -120,6 +120,13 @@ public class SearchAgent extends Agent {
                         msg.addReceiver(new AID("GUI", AID.ISLOCALNAME));
                         msg.setContent(new Gson().toJson(itensToSendFront));
                         System.out.println(itensToSendFront.size() + " enviados");
+                        for (Gym gym : itensToSendFront) {
+                            System.out.println(gym);
+                        }
+
+                        System.out.println();
+                        System.out.println("Fim da Consulta");
+                        System.out.println();
                         itensToSendFront.clear();
                         send(msg);
                     }
